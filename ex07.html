@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou não?</title>
+<style>
+    body {
+        text-align: center;
+        background-color: rgba(0, 139, 139, 0.308);
+    }
+</style>
+</head>
+<body>
+    <h1>Estrangeiro ou não?</h1>
+    <h2>Vamos analisar...</h2>
+    Verifique se é ou não entrangeiro: <input type="text" name="estrangeirismo" id="estrangeirismo">
+    <button id="verificar" onclick="estrangeiro()">verifique...</button>
+    <div id="res">
+
+    </div>
+</body>
+<script> //inacabado!
+    function estrangeiro() {
+        var pais = 'Brasil'
+        var resultado = document.getElementById('estrangeirismo')
+        var res = document.querySelector('div#res')
+        res.innerHTML = 'Verificando...'
+        if (pais = 'Brasil') {
+            res.innerHTML += 'Não é estrangeiro!'
+        } else {
+            res.innerHTML += 'É estrangeiro!'
+        }
+    }
+</script>
+</html>

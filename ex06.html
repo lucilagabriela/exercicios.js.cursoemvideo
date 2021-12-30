@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        background-color: burlywood;
+        color: #000;
+    }
+    div#res {
+        border: 0.5px solid rgba(0, 0, 0, 0.4);
+        box-shadow: 1px 2px 28px;
+        margin: 100px;
+    }
+</style>
+<body>
+    <h1>Testando sua velocidade</h1>
+    <h2>Será que você foi multado?</h2>
+    Velocidade do carro, em km/h: <input type="number" name="vel" id="vel"><br>
+    <button type="button" onsubmit="" onclick="verificar()">Verifique!</button>
+    <div id="res">
+
+    </div>
+</body>
+<script>
+    function verificar() {
+        var v = window.document.getElementById('vel') // ou .querySelector(input#vel)
+        var vel = Number(v.value)
+        var res = window.document.querySelector('div#res')
+        res.innerHTML = ('<p>Sua velocidade é de <strong>' + vel + ' km/h</strong>.</p>')
+        if (vel>60) {
+            res.innerHTML += '<p>Você foi <strong>multado</strong> por excesso de velocidade!</p>'
+        }
+        res.innerHTML += ('Dirija sempre com cinto de segurança!')
+        //v.addEventListener("onclick", verificar)
+    }
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="nmr1" id="nmr1"> +
+    <input type="number" name="nmr2" id="nmr2"> =
+    <input type="button" value="Some agora!" name="soma" id="soma" onclick="somar()">
+    <div id="res">Resultado...</div>
+    <script>
+        function somar() {
+            var numero1 = document.getElementById('nmr1')
+            var numero2 = document.querySelector('input#nmr2')
+            var resultado = document.getElementById('res')
+            var n1 = Number.parseFloat(numero1.value) // converter valor que está na caixa de texto
+            var n2 = Number(numero2.value)
+            var s = n1 + n2
+            resultado.innerHTML = `O resultado resultado da soma entre ${n1} e ${n2} foi <strong>${s}</strong>.`
+        }
+    </script>
+</body>
+</html>
